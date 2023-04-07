@@ -25,7 +25,7 @@ public class EmphasisInlineRenderer : AsciiDocObjectRenderer<EmphasisInline>
     {
         if (obj.DelimiterChar is '*' or '_')
         {
-            return obj.DelimiterCount == 2 ?  ("_", "_") : ("*", "*");
+            return obj.DelimiterCount == 2 ? ("*", "*") : ("_", "_");
         }
         return (null, null);
     }

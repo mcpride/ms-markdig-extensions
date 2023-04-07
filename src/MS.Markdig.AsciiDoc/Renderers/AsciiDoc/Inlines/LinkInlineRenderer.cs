@@ -68,7 +68,7 @@ public class LinkInlineRenderer : AsciiDocObjectRenderer<LinkInline>
     {
         if (!string.IsNullOrEmpty(link.Inline.Title))
         {
-            link.Title = link.Inline.UnescapedTitle.Text;
+            link.Title = link.Inline.Title;
         }
         return link;
     }

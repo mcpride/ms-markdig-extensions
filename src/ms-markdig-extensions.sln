@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Markdig.AsciiDoc", "MS.Markdig.AsciiDoc\MS.Markdig.AsciiDoc.csproj", "{DED36E44-6833-4492-8E31-D505E37E9BC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.Markdig.AsciiDoc", "MS.Markdig.AsciiDoc\MS.Markdig.AsciiDoc.csproj", "{DED36E44-6833-4492-8E31-D505E37E9BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gfm-to-adoc", "examples\gfm-to-adoc\gfm-to-adoc.csproj", "{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{08A93B97-B380-40BA-B70C-78091D3E968F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{DED36E44-6833-4492-8E31-D505E37E9BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DED36E44-6833-4492-8E31-D505E37E9BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DED36E44-6833-4492-8E31-D505E37E9BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444} = {08A93B97-B380-40BA-B70C-78091D3E968F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0517B2A6-4536-4CC5-ADDF-0ED22B9AD780}
