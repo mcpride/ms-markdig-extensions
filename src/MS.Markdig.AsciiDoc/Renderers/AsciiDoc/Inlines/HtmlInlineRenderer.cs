@@ -16,10 +16,10 @@ public class HtmlInlineRenderer : AsciiDocObjectRenderer<HtmlInline>
                 renderer.WriteLine("{empty} +");
                 break;
             case "<mark>":
-                renderer.Write('^');
+                renderer.Write('#');
                 break;
             case "</mark>":
-                renderer.Write('^');
+                renderer.Write('#');
                 break;
             case "<sup>" : 
                 renderer.Write('^');
