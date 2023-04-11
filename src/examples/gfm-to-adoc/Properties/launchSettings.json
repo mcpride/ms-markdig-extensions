@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "gfm-to-adoc": {
+      "commandName": "Project",
+      "commandLineArgs": "> ast.txt"
+    }
+  }
+}

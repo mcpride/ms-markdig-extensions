@@ -94,8 +94,9 @@ This is some code: `echo something`
 
 
 ## Hyperlinks
-- GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com
-- To specify a link on a text, do this:
+
+GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com
+To specify a link on a text, do this:
 
 ```
 This is [an example](http://example.com/ "Title") inline link.
@@ -117,7 +118,8 @@ Adding a `-` will change it into a list:
 
 ```
 - Item 1
-  * Sub item 1
+  * Sub item 1  
+    with break
   * Sub item 2
 - Item 2
 - Item 3
@@ -126,22 +128,30 @@ Adding a `-` will change it into a list:
 will produce
 
 - Item 1
-  * Sub item 1
+  * Sub item 1  
+    with break
   * Sub item 2
 - Item 2
 - Item 3
 
-
 ```
 1. Item 1
+  * Sub item 1
+  * Sub item 2
 1. Item 2
+  1. Sub item 3
+  1. Sub item 4
 1. Item 3
 ```
 
 will produce
 
 1. Item 1
+  * Sub item 1
+  * Sub item 2
 1. Item 2
+  1. Sub item 3
+  1. Sub item 4
 1. Item 3
 
 
