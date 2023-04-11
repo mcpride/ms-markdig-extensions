@@ -95,8 +95,7 @@ _Italic Text_ is done using `*Italic Text*`
 
 == Hyperlinks
 
-* GFMD will automatically detect URL and convert them to links like this link:http://www.futureworkz.com/[http://www.futureworkz.com]
-* To specify a link on a text, do this:
+GFMD will automatically detect URL and convert them to links like this link:http://www.futureworkz.com/[http://www.futureworkz.com] To specify a link on a text, do this:
 
 ----
 This is [an example](http://example.com/ "Title") inline link.
@@ -117,30 +116,46 @@ Adding a `-` will change it into a list:
 
 ----
 - Item 1
-  * Sub item 1
-  * Sub item 2
+   * Sub item 1  
+     with break
+   * Sub item 2
 - Item 2
+   1. Sub item 3
+   1. Sub item 4
 - Item 3
 ----
 
 will produce
 
 * Item 1
-** Sub item 1
+** Sub item 1 +
+with break
 ** Sub item 2
 * Item 2
+.. Sub item 3
+.. Sub item 4
 * Item 3
 
 ----
 1. Item 1
+   * Sub item 1  
+     with break
+   * Sub item 2
 1. Item 2
+   1. Sub item 3
+   1. Sub item 4
 1. Item 3
 ----
 
 will produce
 
 . Item 1
+** Sub item 1 +
+with break
+** Sub item 2
 . Item 2
+.. Sub item 3
+.. Sub item 4
 . Item 3
 
 == Quoting
@@ -149,11 +164,23 @@ You can create a quote using `>`:
 
 ----
 > This is a quote
+>
+> 1. Item 1
+>    * Sub item 1  
+>      with break
+> 1. Item 2
+> 1. Item 3
 ----
 
 will produce
 
 > This is a quote
+> 
+> . Item 1
+> ** Sub item 1 +
+> with break
+> . Item 2
+> . Item 3
 
 == Table
 

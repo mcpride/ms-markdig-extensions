@@ -16,7 +16,7 @@ File.WriteAllText("../../../github-flavored-markdown.adoc", result);
 static void PrintAST(MarkdownObject? obj, int indentCount)
 {
     if (obj == null) return;
-    var indent = new string(' ', indentCount);
+    var indent = new string('.', indentCount);
     Console.Write(indent);
     Console.WriteLine(obj.GetType().Name);
     indentCount = indentCount + 2;

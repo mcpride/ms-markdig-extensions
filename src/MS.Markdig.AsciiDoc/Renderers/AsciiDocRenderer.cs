@@ -7,7 +7,6 @@ namespace Markdig.Renderers
         public string? DocumentTitle { get; set; }
         public string IdPrefix { get; set; } = "_";
         public string IdSeparator { get; set; } = "_";
-        internal int ListIndentCount { get; set; }
         internal int QuoteIndentCount { get; set; }
 
         /// <summary>

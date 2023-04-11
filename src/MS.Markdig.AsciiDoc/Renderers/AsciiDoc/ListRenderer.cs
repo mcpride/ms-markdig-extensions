@@ -12,7 +12,9 @@ public class ListRenderer : AsciiDocObjectRenderer<ListBlock>
     {
         renderer.EnsureLine();
 
-        if (renderer.ListIndentCount < 1)
+        var listIndentCount = ComputeIndentCount(listBlock);
+
+        if (listIndentCount < 1)
         {
             renderer.WriteLine();
         }
@@ -22,27 +24,29 @@ public class ListRenderer : AsciiDocObjectRenderer<ListBlock>
             var listItem = (ListItemBlock)item;
 
             var indentChar = listBlock.IsOrdered ? '.' : '*';
-            if (listBlock.IsOrdered)
+            renderer.Write($"{new string(indentChar, listIndentCount + 1)} ");
+            renderer.WriteChildren(listItem);
+        }
+        renderer.EnsureLine();
+    }
+
+    private int ComputeIndentCount(ListBlock listBlock)
+    {
+        var result = 0;
+        var parent = listBlock.Parent;
+        while (parent != null)
+        {
+            if (parent is ListItemBlock)
             {
-                renderer.Write(". ");
+                result++;
             }
             else
             {
-                renderer.Write("* ");
+                if (parent is not ListBlock) break;
             }
 
-            renderer.ListIndentCount++;
-            try
-            {
-                renderer.PushIndent($"{indentChar}");
-                renderer.WriteChildren(listItem);
-            }
-            finally
-            {
-                renderer.ListIndentCount--;
-                renderer.PopIndent();
-            }
+            parent = parent.Parent;
         }
-        renderer.EnsureLine();
+        return result;
     }
 }

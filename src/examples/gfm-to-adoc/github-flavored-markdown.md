@@ -118,40 +118,46 @@ Adding a `-` will change it into a list:
 
 ```
 - Item 1
-  * Sub item 1  
-    with break
-  * Sub item 2
+   * Sub item 1  
+     with break
+   * Sub item 2
 - Item 2
+   1. Sub item 3
+   1. Sub item 4
 - Item 3
 ```
 
 will produce
 
 - Item 1
-  * Sub item 1  
-    with break
-  * Sub item 2
+   * Sub item 1  
+     with break
+   * Sub item 2
 - Item 2
+   1. Sub item 3
+   1. Sub item 4
 - Item 3
 
 ```
 1. Item 1
-  * Sub item 1
-  * Sub item 2
+   * Sub item 1  
+     with break
+   * Sub item 2
 1. Item 2
-  1. Sub item 3
-  1. Sub item 4
+   1. Sub item 3
+   1. Sub item 4
 1. Item 3
 ```
 
 will produce
 
 1. Item 1
-  * Sub item 1
-  * Sub item 2
+   * Sub item 1  
+     with break
+   * Sub item 2
 1. Item 2
-  1. Sub item 3
-  1. Sub item 4
+   1. Sub item 3
+   1. Sub item 4
 1. Item 3
 
 
@@ -161,11 +167,24 @@ You can create a quote using `>`:
 
 ```
 > This is a quote
+>
+> 1. Item 1
+>    * Sub item 1  
+>      with break
+> 1. Item 2
+> 1. Item 3
+
 ```
 
 will produce
 
 > This is a quote
+>
+> 1. Item 1
+>    * Sub item 1  
+>      with break
+> 1. Item 2
+> 1. Item 3
 
 ## Table
 
