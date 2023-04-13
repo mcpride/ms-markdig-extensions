@@ -27,7 +27,7 @@ will produce
 
 == Horizontal Rules
 
-Horizontal rule is created using `---` on a line by itself.
+Horizontal rule is created using `+---+` on a line by itself.
 
 '''
 
@@ -74,7 +74,7 @@ g.salute
 ----
 
 Note: You can specify the different syntax highlighting based on the coding language eg. ruby, sh (for shell), php, etc +
-Note: You must leave a blank line before the `\````
+Note: You must leave a blank line before the `+\+````
 
 == Coding - In-line
 
@@ -86,12 +86,12 @@ This is some code: `echo something`
 
 will produce
 
-This is some code: `echo something`
+This is some code: `+echo something+`
 
 == Text Formatting
 
-*Bold Text* is done using `**Bold Text**` +
-_Italic Text_ is done using `*Italic Text*`
+*Bold Text* is done using `+**Bold Text**+` +
+_Italic Text_ is done using `+*Italic Text*+`
 
 == Hyperlinks
 
@@ -112,7 +112,7 @@ You can escape using \ eg. \`
 
 == Creating list
 
-Adding a `-` will change it into a list:
+Adding a `+-+` will change it into a list:
 
 ----
 - Item 1
@@ -160,7 +160,7 @@ with break
 
 == Quoting
 
-You can create a quote using `>`:
+You can create a quote using `+>+`:
 
 ----
 > This is a quote
