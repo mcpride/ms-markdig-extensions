@@ -90,12 +90,19 @@ This is some code: `echo something`
 
 ## Text Formatting
 **Bold Text** is done using `**Bold Text**`  
-*Italic Text* is done using `*Italic Text*`
+<b>Bold Text</b> is done using `<b>Bold Text</b>`  
+<strong>Strong Text</strong> is done using `<strong>Strong Text</strong>`  
+*Italic Text* is done using `*Italic Text*`  
+__*Bold Italic Text*__ is done using `__*Bold Italic Text*__`  
+~~Strike-through Text~~ is done using `~~Strike-through Text~~`  
+<mark>Marked Text</mark> is done using `<mark>Marked Text</mark>`  
+<sub>Subscript Text</sub> is done using `<sub>Subscript Text</sub>`  
+<sup>Superscript Text</sup> is done using `<sup>Superscript Text</sup>`  
 
 
 ## Hyperlinks
 
-GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com
+GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com/
 To specify a link on a text, do this:
 
 ```
@@ -190,18 +197,18 @@ will produce
 
 
 ```
-| foo  | bar  |
-| ---: | :--- |
-| baz  | bim  |
-| bam  | bum  |
+| foo  | bar  | baz  |
+| ---: | :--: | :--- |
+| bim  | bam  | bum  |
+| ding | dang | dong |
 ```
 
 will produce
 
-| foo  | bar  |
-| ---: | :--- |
-| baz  | bim  |
-| bam  | bum  |
+| foo  | bar  | baz  |
+| ---: | :--: | :--- |
+| bim  | bam  | bum  |
+| ding | dang | dong |
 
 
 ## Adding Image

@@ -16,22 +16,40 @@ public class HtmlInlineRenderer : AsciiDocObjectRenderer<HtmlInline>
                 renderer.WriteLine("{empty} +");
                 break;
             case "<mark>":
-                renderer.Write('#');
+                renderer.Write("##");
                 break;
             case "</mark>":
-                renderer.Write('#');
+                renderer.Write("##");
                 break;
             case "<sup>" : 
-                renderer.Write('^');
+                renderer.Write("^+");
                 break;
             case "</sup>":
-                renderer.Write('^');
+                renderer.Write("+^");
                 break;
             case "<sub>":
-                renderer.Write('~');
+                renderer.Write("~+");
                 break;
             case "</sub>":
-                renderer.Write('~');
+                renderer.Write("+~");
+                break;
+            case "<u>":
+                renderer.Write("[.underline]#");
+                break;
+            case "</u>":
+                renderer.Write('#');
+                break;
+            case "<b>":
+                renderer.Write('*');
+                break;
+            case "</b>":
+                renderer.Write('*');
+                break;
+            case "<strong>":
+                renderer.Write('*');
+                break;
+            case "</strong>":
+                renderer.Write('*');
                 break;
             default:
                 renderer.Write(obj.Tag);

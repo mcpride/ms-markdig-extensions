@@ -1,19 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Markdig</RootNamespace>
     <AssemblyTitle>MS Markdig AsciDoc</AssemblyTitle>
     <AssemblyDescription>MS Markdig extensions for AsciDoc rendering.</AssemblyDescription>
     <PackageTags>tools markdown markdig asciidoc</PackageTags>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <PackageVersion>0.1.0</PackageVersion>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
+    <PackageVersion>0.2.0</PackageVersion>
+    <VersionPrefix>0.2.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
-    <InformationalVersion>0.1.0</InformationalVersion>
+    <InformationalVersion>0.2.0</InformationalVersion>
     <RepositoryCommit></RepositoryCommit>
     <RepositoryBranch></RepositoryBranch>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
@@ -22,6 +23,5 @@
   <ItemGroup>
     <PackageReference Include="Markdig" Version="0.31.0" />
   </ItemGroup>
-
 
 </Project>

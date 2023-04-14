@@ -17,7 +17,7 @@ namespace Markdig.Renderers.AsciiDoc
 
             var hasHeader = false;
             var columnCount = 0;
-            for (var i = 0; i < table.Count; i++)
+            for (var i = 0; i < table.Count; /*i++*/)
             {
                 var rowObj = table[i];
                 var row = (TableRow)rowObj;
@@ -48,7 +48,7 @@ namespace Markdig.Renderers.AsciiDoc
                 }
                 else
                 {
-                    colDef = "~";
+                    colDef = string.Empty;
                 }
 
                 if (columnDefinition.Alignment != null)
@@ -64,6 +64,9 @@ namespace Markdig.Renderers.AsciiDoc
                         case TableColumnAlign.Right:
                             colDef = $">{colDef}";
                             break;
+                        // default:
+                        //     colDef = $"<{colDef}";
+                        //     break;
                     }
                 }
                 colDefs.Add(colDef);

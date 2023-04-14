@@ -91,11 +91,18 @@ This is some code: `+echo something+`
 == Text Formatting
 
 *Bold Text* is done using `+**Bold Text**+` +
-_Italic Text_ is done using `+*Italic Text*+`
+*Bold Text* is done using `+<b>Bold Text</b>+` +
+*Strong Text* is done using `+<strong>Strong Text</strong>+` +
+_Italic Text_ is done using `+*Italic Text*+` +
+*_Bold Italic Text_* is done using `+__*Bold Italic Text*__+` +
+[line-through]#Strike-through Text# is done using `+~~Strike-through Text~~+` +
+##Marked Text## is done using `+<mark>Marked Text</mark>+` +
+~+Subscript Text+~ is done using `+<sub>Subscript Text</sub>+` +
+^+Superscript Text+^ is done using `+<sup>Superscript Text</sup>+`
 
 == Hyperlinks
 
-GFMD will automatically detect URL and convert them to links like this link:http://www.futureworkz.com/[http://www.futureworkz.com] To specify a link on a text, do this:
+GFMD will automatically detect URL and convert them to links like this link:http://www.futureworkz.com/[] To specify a link on a text, do this:
 
 ----
 This is [an example](http://example.com/ "Title") inline link.
@@ -185,24 +192,27 @@ will produce
 == Table
 
 ----
-| foo  | bar  |
-| ---: | :--- |
-| baz  | bim  |
-| bam  | bum  |
+| foo  | bar  | baz  |
+| ---: | :--: | :--- |
+| bim  | bam  | bum  |
+| ding | dang | dong |
 ----
 
 will produce
 
-[cols=">~,<~",options="header"]
+[cols=">,^,<",options="header"]
 |===
 |foo
 |bar
-
 |baz
-|bim
 
+|bim
 |bam
 |bum
+
+|ding
+|dang
+|dong
 |===
 
 == Adding Image

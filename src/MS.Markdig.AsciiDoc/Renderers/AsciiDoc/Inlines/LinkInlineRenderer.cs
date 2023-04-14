@@ -12,6 +12,10 @@ public class LinkInlineRenderer : AsciiDocObjectRenderer<LinkInline>
     {
         var linkData = ReadId(ReadTitle(ReadUrl(ReadMacro(new AsciiDocLink(link)))));
         linkData.Text = renderer.RenderLinkText(link);
+        if (linkData.Url != null && linkData.Text != null && string.Equals(linkData.Url, linkData.Text))
+        {
+            linkData.Text = string.Empty;
+        }
 
         if (renderer.AsciiDocLinkRewriter != null)
         {
