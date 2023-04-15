@@ -106,8 +106,7 @@ __*Bold Italic Text*__ is done using `__*Bold Italic Text*__`
 
 ## Hyperlinks
 
-GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com/<br>
-To specify a link on a text, do this:
+GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com/<br>To specify a link on a text, do this:
 
 ```
 This is [an example](http://example.com/ "Title") inline link.

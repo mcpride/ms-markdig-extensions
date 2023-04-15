@@ -15,7 +15,7 @@ public class HtmlInlineRenderer : AsciiDocObjectRenderer<HtmlInline>
             case "<br>":
             case "<br/>":
             case "<br />":
-              renderer.WriteLine("{empty} +");
+                renderer.WriteLine(obj.Column == 0 ? "{empty} +" : " +");
                 break;
             case "<mark>":
                 renderer.Write("##");
