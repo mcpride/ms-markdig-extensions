@@ -95,14 +95,18 @@ This is some code: `echo something`
 *Italic Text* is done using `*Italic Text*`  
 __*Bold Italic Text*__ is done using `__*Bold Italic Text*__`  
 ~~Strike-through Text~~ is done using `~~Strike-through Text~~`  
+<del>Deleted Text</del> is done using `<del>Deleted Text</del>`  
 <mark>Marked Text</mark> is done using `<mark>Marked Text</mark>`  
+~Subscript Text~ is done using `~Subscript Text~`  
 <sub>Subscript Text</sub> is done using `<sub>Subscript Text</sub>`  
+^Superscript Text^ is done using `^Superscript Text^`  
 <sup>Superscript Text</sup> is done using `<sup>Superscript Text</sup>`  
+++Inserted Text++ is done using `++Inserted Text++`  
 
 
 ## Hyperlinks
 
-GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com/
+GFMD will automatically detect URL and convert them to links like this http://www.futureworkz.com/<br>
 To specify a link on a text, do this:
 
 ```

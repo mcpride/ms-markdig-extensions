@@ -35,10 +35,21 @@ public class EmphasisInlineRenderer : AsciiDocObjectRenderer<EmphasisInline>
                   return ("_", "_");
             }
         }
-        // strike through:
-        else if ((obj.DelimiterChar is '~') && (obj.DelimiterCount == 2))
+        else if (obj.DelimiterChar is '~')
         {
-            return ("[line-through]#", "#");
+            return (obj.DelimiterCount == 1) ? ("~+", "+~") : ("[.line-through]#", "#");
+        }
+        else if (obj.DelimiterChar is '^')
+        {
+            return ("^+", "+^");
+        }
+        else if ((obj.DelimiterChar is '=') && (obj.DelimiterCount == 2))
+        {
+            return ("##", "##");
+        }
+        else if ((obj.DelimiterChar is '+') && (obj.DelimiterCount == 2))
+        {
+            return ("[.underline]#", "#");
         }
         return (null, null);
     }

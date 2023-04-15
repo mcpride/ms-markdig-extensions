@@ -13,7 +13,9 @@ public class HtmlInlineRenderer : AsciiDocObjectRenderer<HtmlInline>
         switch (obj.Tag)
         {
             case "<br>":
-                renderer.WriteLine("{empty} +");
+            case "<br/>":
+            case "<br />":
+              renderer.WriteLine("{empty} +");
                 break;
             case "<mark>":
                 renderer.Write("##");
@@ -51,10 +53,15 @@ public class HtmlInlineRenderer : AsciiDocObjectRenderer<HtmlInline>
             case "</strong>":
                 renderer.Write('*');
                 break;
+            case "<del>":
+                renderer.Write("[.line-through]#");
+                break;
+            case "</del>":
+                renderer.Write('#');
+                break;
             default:
                 renderer.Write(obj.Tag);
                 break;
-
         }
     }
 }

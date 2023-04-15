@@ -3,7 +3,7 @@ using Markdig.Parsers;
 using Markdig.Renderers;
 using Markdig.Syntax;
 
-var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions()/*.EnableTrackTrivia()*/.Build();
+var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseEmphasisExtras()/*.EnableTrackTrivia()*/.Build();
 var document = MarkdownParser.Parse(File.ReadAllText("../../../github-flavored-markdown.md"), pipeline);
 PrintAST(document, 0);
 var renderer = new AsciiDocRenderer(new StringWriter());
