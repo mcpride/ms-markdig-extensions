@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Markdig.Tests</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="Markdig" Version="0.31.0" />
+    <PackageReference Include="Xbehave" Version="2.4.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../MS.Markdig.AsciiDoc/MS.Markdig.AsciiDoc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MarkdownResources/simple-table.md" />
+    <None Remove="ExpectedAsciiDoc/simple-table.adoc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MarkdownResources/simple-table.md" />
+    <EmbeddedResource Include="ExpectedAsciiDoc/simple-table.adoc" />
+  </ItemGroup>
+
+</Project>

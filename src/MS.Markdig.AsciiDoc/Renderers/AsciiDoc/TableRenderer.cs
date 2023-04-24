@@ -13,7 +13,11 @@ namespace Markdig.Renderers.AsciiDoc
         protected override void Write(AsciiDocRenderer renderer, Table table)
         {
             renderer.EnsureLine();
-            renderer.WriteLine();
+            
+            if (!renderer.IsFirstInContainer)
+            {
+                renderer.WriteLine();
+            }
 
             var hasHeader = false;
             var columnCount = 0;
@@ -114,7 +118,11 @@ namespace Markdig.Renderers.AsciiDoc
                 }
             }
             renderer.Write("|===");
-            renderer.EnsureLine();
+
+            if (!renderer.IsLastInContainer)
+            {
+                renderer.EnsureLine();
+            }
         }
     }
 }
