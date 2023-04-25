@@ -14,8 +14,14 @@ namespace Markdig.Renderers.AsciiDoc
         {
             if (renderer == null) throw new ArgumentNullException(nameof(renderer));
             if (obj == null) throw new ArgumentNullException(nameof(obj));
+
             renderer.EnsureLine();
-            renderer.WriteLine();
+
+            if (!renderer.IsFirstInContainer)
+            {
+                renderer.WriteLine();
+            }
+
             renderer.Write("--");
             renderer.EnsureLine();
 
@@ -37,7 +43,11 @@ namespace Markdig.Renderers.AsciiDoc
                 }
             }
             renderer.Write("--");
-            renderer.EnsureLine();
+
+            if (!renderer.IsLastInContainer)
+            {
+                renderer.EnsureLine();
+            }
         }
     }
 }

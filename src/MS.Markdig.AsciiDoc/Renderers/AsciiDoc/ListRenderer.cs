@@ -27,7 +27,10 @@ public class ListRenderer : AsciiDocObjectRenderer<ListBlock>
             renderer.Write($"{new string(indentChar, listIndentCount + 1)} ");
             renderer.WriteChildren(listItem);
         }
-        renderer.EnsureLine();
+        if (!renderer.IsLastInContainer)
+        {
+            renderer.EnsureLine();
+        }
     }
 
     private int ComputeIndentCount(ListBlock listBlock)

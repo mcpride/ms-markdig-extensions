@@ -11,7 +11,17 @@ public class ThematicBreakRenderer : AsciiDocObjectRenderer<ThematicBreakBlock>
     protected override void Write(AsciiDocRenderer renderer, ThematicBreakBlock obj)
     {
         renderer.EnsureLine();
-        renderer.WriteLine();
-        renderer.WriteLine("'''");
+
+        if (!renderer.IsFirstInContainer)
+        {
+            renderer.WriteLine();
+        }
+
+        renderer.Write("'''");
+
+        if (!renderer.IsLastInContainer)
+        {
+            renderer.EnsureLine();
+        }
     }
 }

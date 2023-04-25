@@ -11,6 +11,7 @@ namespace Markdig.Renderers.AsciiDoc
         /// <inheritdoc />
         protected override void Write(AsciiDocRenderer renderer, ParagraphBlock obj)
         {
+
             if (!renderer.IsFirstInContainer)
             {
                 renderer.EnsureLine();
@@ -18,12 +19,7 @@ namespace Markdig.Renderers.AsciiDoc
             }
 
             renderer.WriteLeafInline(obj);
-
-            if (!renderer.IsLastInContainer)
-            {
-                renderer.EnsureLine();
-            }
-
+            renderer.EnsureLine();
         }
     }
 }

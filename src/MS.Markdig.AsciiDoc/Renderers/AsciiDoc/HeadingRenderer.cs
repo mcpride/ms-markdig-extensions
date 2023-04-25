@@ -11,9 +11,10 @@ namespace Markdig.Renderers.AsciiDoc
         /// <inheritdoc />
         protected override void Write(AsciiDocRenderer renderer, HeadingBlock obj)
         {
+            renderer.EnsureLine();
+
             if (!renderer.IsFirstInContainer)
             {
-                renderer.EnsureLine();
                 renderer.WriteLine();
             }
 
@@ -28,7 +29,11 @@ namespace Markdig.Renderers.AsciiDoc
             {
                 renderer.Write(header);
             }
-            renderer.EnsureLine();
+
+            if (!renderer.IsLastInContainer)
+            {
+                renderer.EnsureLine();
+            }
         }
     }
 }
