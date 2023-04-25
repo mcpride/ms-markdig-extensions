@@ -31,6 +31,7 @@ namespace Markdig.Renderers.AsciiDoc
         [Example("an unordered list block", "lst01")]
         [Example("an ordered list block", "lst02")]
         [Example("headers", "hdr01")]
+        [Example("links", "lnk01")]
         public void RenderMarkdown(string description, string content)
         {
             MarkdownDocument document = null;

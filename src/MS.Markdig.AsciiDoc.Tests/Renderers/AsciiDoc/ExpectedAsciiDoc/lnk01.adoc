@@ -1,0 +1,5 @@
+image::http://git-scm.com/figures/18333fig0319-tn.png["Branching Concepts", title="Branching Map"]
+
+This is link:http://example.com/["an example", title="Title"] inline link.
+
+link:http://example.net/[This link] has no title attribute.

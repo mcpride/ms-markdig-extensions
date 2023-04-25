@@ -34,6 +34,7 @@
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code02.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/hdr01.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lnk01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lst01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lst02.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
@@ -44,6 +45,7 @@
     <None Remove="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/code02.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/hdr01.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/lnk01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/lst01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/lst02.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
@@ -57,6 +59,7 @@
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code02.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/hdr01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lnk01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lst01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lst02.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
@@ -67,6 +70,7 @@
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code02.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hdr01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lnk01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lst01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lst02.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
