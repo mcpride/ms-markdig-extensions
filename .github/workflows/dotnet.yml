@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build src/ms-markdig-extensions.sln --no-restore
     - name: Test
-      run: dotnet test src/ms-markdig-extensions.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory --results-directory ./coverage
+      run: dotnet test src/ms-markdig-extensions.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./coverage
     - name: Code Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
