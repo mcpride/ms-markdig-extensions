@@ -25,6 +25,7 @@ namespace Markdig.Renderers.AsciiDoc
         [Example("a simple grid table with headers", "tbl02")]
         [Example("a simple grid table without headers", "tbl03")]
         [Example("a pipe table with column alignments", "tbl04")]
+        [Example("different formatted text", "txt01")]
         public void RenderMarkdown(string description, string content)
         {
             MarkdownDocument document = null;

@@ -1,0 +1,13 @@
+*Bold Text* is done using `+**Bold Text**+` +
+*Bold Text* is done using `+<b>Bold Text</b>+` +
+*Strong Text* is done using `+<strong>Strong Text</strong>+` +
+_Italic Text_ is done using `+*Italic Text*+` +
+*_Bold Italic Text_* is done using `+__*Bold Italic Text*__+` +
+[.line-through]#Strike-through Text# is done using `+~~Strike-through Text~~+` +
+[.line-through]#Deleted Text# is done using `+<del>Deleted Text</del>+` +
+##Marked Text## is done using `+<mark>Marked Text</mark>+` +
+~+Subscript Text+~ is done using `+~Subscript Text~+` +
+~+Subscript Text+~ is done using `+<sub>Subscript Text</sub>+` +
+^+Superscript Text+^ is done using `+^Superscript Text^+` +
+^+Superscript Text+^ is done using `+<sup>Superscript Text</sup>+` +
+[.underline]#Inserted Text# is done using `pass:[++Inserted Text++]`

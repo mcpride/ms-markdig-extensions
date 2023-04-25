@@ -16,8 +16,13 @@ namespace Markdig.Renderers.AsciiDoc
                 renderer.EnsureLine();
                 renderer.WriteLine();
             }
+
             renderer.WriteLeafInline(obj);
-            renderer.EnsureLine();
+
+            if (!renderer.IsLastInContainer)
+            {
+                renderer.EnsureLine();
+            }
 
         }
     }
