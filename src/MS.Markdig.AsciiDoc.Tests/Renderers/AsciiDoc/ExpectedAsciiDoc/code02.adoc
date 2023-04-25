@@ -1,0 +1,6 @@
+[plantuml,target="{plantumldir}puml-a595a85f59b6866db1ff5abeefed071a172a14c62c5b73de1ab12914a6ac70f4",format=svg]
+----
+@startuml
+Bob->Alice : Hello!
+@enduml
+----

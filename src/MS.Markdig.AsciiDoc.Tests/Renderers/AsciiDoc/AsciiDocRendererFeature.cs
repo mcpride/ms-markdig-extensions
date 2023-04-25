@@ -27,6 +27,10 @@ namespace Markdig.Renderers.AsciiDoc
         [Example("a pipe table with column alignments", "tbl04")]
         [Example("different formatted text", "txt01")]
         [Example("a ruby code block", "code01")]
+        [Example("a PlantUML diagram code block", "code02")]
+        [Example("an unordered list block", "lst01")]
+        [Example("an ordered list block", "lst02")]
+        [Example("headers", "hdr01")]
         public void RenderMarkdown(string description, string content)
         {
             MarkdownDocument document = null;
