@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Markdig.Tests
+namespace Markdig
 {
     public static class TestExtensions
     {
@@ -14,12 +10,17 @@ namespace Markdig.Tests
         {
             using (var stream = assembly.GetManifestResourceStream(name))
             {
-                stream.Position = 0;
+                stream!.Position = 0;
                 using (var reader = new StreamReader(stream, Encoding.UTF8))
                 {
-                    return reader.ReadToEnd();
+                    return reader.ReadToEnd().SanitizeNewLine();
                 }
             }
+        }
+
+        public static string SanitizeNewLine(this string text)
+        {
+            return text.Replace("\r\n", "\n").Replace("\r", "\n");
         }
 
     }

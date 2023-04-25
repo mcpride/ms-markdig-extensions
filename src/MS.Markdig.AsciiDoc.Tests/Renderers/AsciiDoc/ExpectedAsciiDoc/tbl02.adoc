@@ -1,0 +1,14 @@
+[cols="33.33%,33.33%,33.33%",options="header"]
+|===
+|foo
+|bar
+|baz
+
+|bim
+|bam
+|bum
+
+|ding
+|dang
+|dong
+|===

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MS.Markdig.AsciiDoc\MS.Markdig.AsciiDoc.csproj" />
+    <ProjectReference Include="../../MS.Markdig.AsciiDoc/MS.Markdig.AsciiDoc.csproj" />
   </ItemGroup>
 
 </Project>

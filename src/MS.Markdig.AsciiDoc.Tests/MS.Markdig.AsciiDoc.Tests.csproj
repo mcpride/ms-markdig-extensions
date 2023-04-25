@@ -3,24 +3,24 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
-    <RootNamespace>Markdig.Tests</RootNamespace>
+    <RootNamespace>Markdig</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Markdig" Version="0.31.0" />
     <PackageReference Include="Xbehave" Version="2.4.1" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="coverlet.msbuild" Version="3.1.0">
+    <PackageReference Include="coverlet.msbuild" Version="3.2.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="3.1.0">
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -31,13 +31,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="MarkdownResources/simple-table.md" />
-    <None Remove="ExpectedAsciiDoc/simple-table.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl02.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl02.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl03.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl04.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="MarkdownResources/simple-table.md" />
-    <EmbeddedResource Include="ExpectedAsciiDoc/simple-table.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl02.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl02.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl03.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl04.md" />
   </ItemGroup>
 
 </Project>
