@@ -25,8 +25,6 @@ jobs:
       run: dotnet build src/ms-markdig-extensions.sln --no-restore
     - name: Test
       run: dotnet test src/ms-markdig-extensions.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
-    - name: Test
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
     - name: Copy Coverage to Predictable Location
       run: cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
     - name: Code Coverage Summary Report
