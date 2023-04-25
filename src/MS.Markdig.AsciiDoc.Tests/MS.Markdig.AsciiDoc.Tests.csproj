@@ -31,11 +31,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl02.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/txt01.adoc" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl02.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/tbl03.md" />
@@ -44,11 +46,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl02.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/txt01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl02.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/tbl03.md" />
