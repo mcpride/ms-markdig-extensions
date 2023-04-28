@@ -45,8 +45,5 @@ jobs:
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
     - name: Build release
       run: dotnet build src/ms-markdig-extensions.sln --no-restore --configuration Release
-    - name: nuget push
-      env:
-      - NUGET_API_KEY: ${{ secrets.NUGET_PUSH_API_KEY }}
-      if: env.API_KEY != ''
-      run: dotnet nuget push ./**/Release/MS.Markdig.*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ env.NUGET_API_KEY }}
+    - name: Push packages to nuget.org
+      run: dotnet nuget push ./**/Release/MS.Markdig.*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_PUSH_API_KEY }}
