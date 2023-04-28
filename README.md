@@ -25,13 +25,13 @@ With update to version 1.0.0 and higher the versioning then will follow the semv
 
 #### Installation
 
-You can add `MS.Markdig.AsciiDoc` as nuget package to your project.
+You can add `McPride.Markdig.AsciiDoc` as nuget package to your project.
 
-* dotnet cli: `dotnet add package MS.Markdig.AsciiDoc`
-* PS Package Manager: `Install-Package MS.Markdig.AsciiDoc`
-* nuget cli: `nuget install MS.Markdig.AsciiDoc`
+* dotnet cli: `dotnet add package McPride.Markdig.AsciiDoc`
+* PS Package Manager: `Install-Package McPride.Markdig.AsciiDoc`
+* nuget cli: `nuget install McPride.Markdig.AsciiDoc`
 
-Alternativly can also download the source code, include the `MS.Markdig.AsciiDoc` project into your solution and reference it in your project. 
+Alternativly can also download the source code, include the `McPride.Markdig.AsciiDoc` project into your solution and reference it in your project. 
 
 #### Usage
 
