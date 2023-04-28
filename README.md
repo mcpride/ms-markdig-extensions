@@ -10,7 +10,7 @@ These extensions contains the following extensions for [Markdig](https://github.
 
 ### The AsciiDoc renderer
 
-With these renderer you can convert a [CommonMark](https://spec.commonmark.org/) compliant markdown document to an equivalent AsciiDoc document. The reason, why I wrote it, is, that my team mainly writes technical documentation in AsciiDoc format and converts it to multiple target formats like html, docbook, docx or pdf. Unfortunately there exist some pieces of documentation written in markdown e.g. architecture decision records, which are driven by markdown focused tools. With the help of the AsciiDoc renderer we can now include our ADRs into our arc42 based architecture documentation, written in AsciiDoc.
+With this renderer you can convert a [CommonMark](https://spec.commonmark.org/) compliant markdown document to an equivalent AsciiDoc document. The reason, why I wrote it, is, that my team mainly writes technical documentation in AsciiDoc format and converts it to multiple target formats like html, docbook, docx or pdf. Unfortunately there exist some pieces of documentation written in markdown e.g. architecture decision records, which are driven by markdown focused tools. With the help of the AsciiDoc renderer we can now include our ADRs into our arc42 based architecture documentation, written in AsciiDoc.
 
 #### Dependencies
 
@@ -31,7 +31,7 @@ You can add `McPride.Markdig.AsciiDoc` as nuget package to your project.
 * PS Package Manager: `Install-Package McPride.Markdig.AsciiDoc`
 * nuget cli: `nuget install McPride.Markdig.AsciiDoc`
 
-Alternativly can also download the source code, include the `McPride.Markdig.AsciiDoc` project into your solution and reference it in your project. 
+Alternativly you can also download the source code, include the `McPride.Markdig.AsciiDoc` project into your solution and reference it in your project. 
 
 #### Usage
 
