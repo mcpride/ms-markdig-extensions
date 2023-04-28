@@ -1,10 +1,15 @@
-name: CI Build
+name: Release Build
+
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags: 
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-alpha[0-9]+.[0-9]+"
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-beta[0-9]+.[0-9]+"
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-rc[0-9]+.[0-9]+"
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-preview[0-9]+.[0-9]+"
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-prerelease[0-9]+.[0-9]+"
+    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-pre[0-9]+.[0-9]+"
 
 jobs:
   build:
@@ -18,7 +23,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore src/ms-markdig-extensions.sln
+      run: dotnet restore src/mcpride-markdig-extensions.sln
     - name: Build Debug
       run: dotnet build src/mcpride-markdig-extensions.sln --no-restore --configuration Debug
     - name: Test
@@ -43,3 +48,7 @@ jobs:
         path: code-coverage-results.md
     - name: Write to Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+    - name: Build release
+      run: dotnet build src/mcpride-markdig-extensions.sln --no-restore --configuration Release
+    - name: Push packages to nuget.org
+      run: dotnet nuget push ./**/Release/McPride.Markdig.*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_PUSH_API_KEY }}

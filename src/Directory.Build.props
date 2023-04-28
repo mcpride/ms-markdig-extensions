@@ -2,10 +2,10 @@
   <PropertyGroup>
     <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
     <Authors>mcpride</Authors>
-    <Product>MS Markdig extensions</Product>
+    <Product>McPride Markdig extensions</Product>
     <CopyrightYear>2023</CopyrightYear>
     <PackageProjectUrl>https://github.com/mcpride/ms-markdig-extensions</PackageProjectUrl>
-    <Copyright>Copyright © $(CopyrightYear) Marco Stolze (alias mcpride)</Copyright>
+    <Copyright>Copyright © $(CopyrightYear) Marco Stolze (alias McPride)</Copyright>
     <RepositoryUrl>https://github.com/mcpride/ms-markdig-extensions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>

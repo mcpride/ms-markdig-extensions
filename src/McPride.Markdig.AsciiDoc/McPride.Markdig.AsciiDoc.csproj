@@ -6,10 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Markdig</RootNamespace>
-    <Title>MS Markdig AsciiDoc extension</Title>
+    <Title>McPride Markdig AsciiDoc extension</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>tools markdown markdig asciidoc</PackageTags>
-    <Description>A Markdown to AsciiDoc text renderer extension for 'Markdig', the CommonMark compliant markdown processor.</Description>
+    <Description>A Markdown-to-AsciiDoc text renderer extension for 'Markdig', the CommonMark compliant markdown processor.</Description>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
     <MinVerTagPrefix>$(AssemblyName)-v</MinVerTagPrefix>
     <MinVerMinimumMajorMinor>0.2</MinVerMinimumMajorMinor>
