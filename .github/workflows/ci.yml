@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore src/ms-markdig-extensions.sln
+      run: dotnet restore src/mcpride-markdig-extensions.sln
     - name: Build Debug
       run: dotnet build src/mcpride-markdig-extensions.sln --no-restore --configuration Debug
     - name: Test
