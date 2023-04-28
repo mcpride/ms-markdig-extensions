@@ -1,28 +1,26 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+name: Release Build
 
-name: .NET
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags: 
+    - "MS.Markdig*-v[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: CI Build
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore src/ms-markdig-extensions.sln
-    - name: Build
-      run: dotnet build src/ms-markdig-extensions.sln --no-restore
+    - name: Build Debug
+      run: dotnet build src/ms-markdig-extensions.sln --no-restore -Configuration Debug
     - name: Test
       run: dotnet test src/ms-markdig-extensions.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./coverage
     - name: Code Coverage Summary Report
@@ -44,4 +42,6 @@ jobs:
         recreate: true
         path: code-coverage-results.md
     - name: Write to Job Summary
-      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY       
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+    - name: Build release
+      run: dotnet build src/ms-markdig-extensions.sln --no-restore -Configuration Release       

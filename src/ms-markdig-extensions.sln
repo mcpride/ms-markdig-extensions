@@ -5,11 +5,18 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.Markdig.AsciiDoc", "MS.Markdig.AsciiDoc\MS.Markdig.AsciiDoc.csproj", "{DED36E44-6833-4492-8E31-D505E37E9BC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gfm-to-adoc", "examples\gfm-to-adoc\gfm-to-adoc.csproj", "{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gfm-to-adoc", "examples\gfm-to-adoc\gfm-to-adoc.csproj", "{22C5A8ED-E11F-4C0F-A61D-0D988DA3F444}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{08A93B97-B380-40BA-B70C-78091D3E968F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Markdig.AsciiDoc.Tests", "MS.Markdig.AsciiDoc.Tests\MS.Markdig.AsciiDoc.Tests.csproj", "{5F1CDAC0-DFDE-4BA3-B251-D10566C7AA8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.Markdig.AsciiDoc.Tests", "MS.Markdig.AsciiDoc.Tests\MS.Markdig.AsciiDoc.Tests.csproj", "{5F1CDAC0-DFDE-4BA3-B251-D10566C7AA8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{AF0E5E23-A3A9-4A9E-A9A2-6E933585549C}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		..\.github\workflows\ci.yml = ..\.github\workflows\ci.yml
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

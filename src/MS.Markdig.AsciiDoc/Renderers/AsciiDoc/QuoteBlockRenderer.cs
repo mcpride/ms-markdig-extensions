@@ -11,12 +11,9 @@ namespace Markdig.Renderers.AsciiDoc
         /// <inheritdoc />
         protected override void Write(AsciiDocRenderer renderer, QuoteBlock obj)
         {
-            if (!renderer.IsFirstInContainer)
-            {
-                renderer.EnsureLine();
-            }
+            renderer.EnsureLine();
 
-            if (renderer.QuoteIndentCount < 1)
+            if (!renderer.IsFirstInContainer && renderer.QuoteIndentCount < 1)
             {
                 renderer.WriteLine();
             }

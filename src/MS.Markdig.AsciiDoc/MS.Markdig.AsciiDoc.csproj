@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0</TargetFrameworks>
@@ -6,22 +6,29 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Markdig</RootNamespace>
-    <AssemblyTitle>MS Markdig AsciDoc</AssemblyTitle>
-    <AssemblyDescription>MS Markdig extensions for AsciDoc rendering.</AssemblyDescription>
+    <Title>MS Markdig AsciiDoc extension</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>tools markdown markdig asciidoc</PackageTags>
-    <AssemblyVersion>0.2.0.0</AssemblyVersion>
-    <FileVersion>0.2.0.0</FileVersion>
-    <PackageVersion>0.2.0</PackageVersion>
-    <VersionPrefix>0.2.0</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
-    <InformationalVersion>0.2.0</InformationalVersion>
-    <RepositoryCommit></RepositoryCommit>
-    <RepositoryBranch></RepositoryBranch>
+    <Description>A Markdown to AsciiDoc text renderer extension for 'Markdig', the CommonMark compliant markdown processor.</Description>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <MinVerTagPrefix>$(AssemblyName)-v</MinVerTagPrefix>
+    <MinVerMinimumMajorMinor>0.2</MinVerMinimumMajorMinor>
+    <!--<MinVerAutoIncrement>minor</MinVerAutoIncrement>-->
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Markdig" Version="0.31.0" />
+    <PackageReference Include="MinVer" Version="4.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,7 @@
+> This is a quote
+> 
+> . Item 1
+> ** Sub item 1 +
+> with break
+> . Item 2
+> . Item 3
