@@ -14,7 +14,7 @@ With this renderer you can convert a [CommonMark](https://spec.commonmark.org/) 
 
 #### Dependencies
 
-* Dotnet (core) >= v3.1
+* dotnet >= v6.0
 * [Markdig nuget package](https://www.nuget.org/packages/Markdig)
 
 #### Status
