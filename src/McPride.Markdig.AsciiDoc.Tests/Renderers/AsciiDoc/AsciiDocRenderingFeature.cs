@@ -7,12 +7,12 @@ using Xbehave;
 
 namespace Markdig.Renderers.AsciiDoc
 {
-    public class AsciiDocRendererFeature : IClassFixture<MarkdownPipelineFixture>
+    public class AsciiDocRenderingFeature : IClassFixture<MarkdownPipelineFixture>
     {
         private readonly MarkdownPipelineFixture _fixture;
         private readonly ITestOutputHelper _output;
 
-        public AsciiDocRendererFeature(
+        public AsciiDocRenderingFeature(
             ITestOutputHelper output, 
             MarkdownPipelineFixture fixture) 
         {
@@ -45,8 +45,8 @@ namespace Markdig.Renderers.AsciiDoc
         {
             MarkdownDocument document = null;
             string result = null;
-            var a = typeof(AsciiDocRendererFeature).Assembly;
-            var n = typeof(AsciiDocRendererFeature).Namespace;
+            var a = typeof(AsciiDocRenderingFeature).Assembly;
+            var n = typeof(AsciiDocRenderingFeature).Namespace;
 
             $"Given a markdown document that contains {description}"
                 .x(() =>
