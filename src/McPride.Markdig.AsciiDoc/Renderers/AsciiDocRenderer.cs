@@ -30,7 +30,6 @@ namespace Markdig.Renderers
         {
             // Default block renderers
             ObjectRenderers.Add(new AsciiDoc.FencedCodeBlockRenderer());
-            ObjectRenderers.Add(new AsciiDoc.CodeBlockRenderer());
             ObjectRenderers.Add(new AsciiDoc.ListRenderer());
             ObjectRenderers.Add(new AsciiDoc.HeadingRenderer());
             ObjectRenderers.Add(new AsciiDoc.HtmlBlockRenderer());

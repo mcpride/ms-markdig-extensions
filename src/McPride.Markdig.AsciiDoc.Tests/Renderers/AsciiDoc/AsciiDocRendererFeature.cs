@@ -29,12 +29,18 @@ namespace Markdig.Renderers.AsciiDoc
         [Example("a ruby code block", "code01")]
         [Example("a PlantUML diagram code block", "code02")]
         [Example("an unspecified code block", "code03")]
+        [Example("an embedded code block", "code04")]
         [Example("an unordered list block", "lst01")]
         [Example("an ordered list block", "lst02")]
         [Example("headers", "hdr01")]
         [Example("links", "lnk01")]
-        [Example("with a blockquote", "qt01")]
+        [Example("with a block quote", "qt01")]
         [Example("with a horizontal rule", "hr01")]
+        [Example("with another horizontal rule", "hr02")]
+        [Example("with a div html block", "hb01")]
+        [Example("with a html entity inline", "he01")]
+        [Example("with an autolink inline", "ali01")]
+        [Example("with line breaks inline", "lbi01")]
         public void RenderMarkdown(string description, string content)
         {
             MarkdownDocument document = null;

@@ -13,13 +13,13 @@
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
     <MinVerTagPrefix>$(AssemblyName)-v</MinVerTagPrefix>
     <MinVerMinimumMajorMinor>0.2</MinVerMinimumMajorMinor>
-    <!--<MinVerAutoIncrement>minor</MinVerAutoIncrement>-->
+    <MinVerAutoIncrement>minor</MinVerAutoIncrement>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="README.md">
       <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+      <PackagePath>/</PackagePath>
     </None>
   </ItemGroup>
 

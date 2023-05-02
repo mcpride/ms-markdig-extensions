@@ -27,15 +27,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\McPride.Markdig.AsciiDoc\McPride.Markdig.AsciiDoc.csproj" />
+    <ProjectReference Include="../McPride.Markdig.AsciiDoc/McPride.Markdig.AsciiDoc.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/ali01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code02.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code03.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/code04.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/hb01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/hdr01.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/he01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/hr01.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/hr02.adoc" />
+    <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lbi01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lnk01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lst01.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/lst02.adoc" />
@@ -45,11 +51,17 @@
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
     <None Remove="Renderers/AsciiDoc/ExpectedAsciiDoc/txt01.adoc" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/ali01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/code02.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/code03.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/code04.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/hb01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/hdr01.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/he01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/hr01.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/hr02.md" />
+    <None Remove="Renderers/AsciiDoc/MarkdownResources/lbi01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/lnk01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/lst01.md" />
     <None Remove="Renderers/AsciiDoc/MarkdownResources/lst02.md" />
@@ -62,11 +74,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/ali01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code02.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code03.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/code04.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/hb01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/hdr01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/he01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/hr01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/hr02.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lbi01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lnk01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lst01.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/lst02.adoc" />
@@ -76,11 +94,17 @@
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl03.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/tbl04.adoc" />
     <EmbeddedResource Include="Renderers/AsciiDoc/ExpectedAsciiDoc/txt01.adoc" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/ali01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code02.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code03.md" />
-    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hr01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/code04.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hb01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hdr01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/he01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hr01.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/hr02.md" />
+    <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lbi01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lnk01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lst01.md" />
     <EmbeddedResource Include="Renderers/AsciiDoc/MarkdownResources/lst02.md" />

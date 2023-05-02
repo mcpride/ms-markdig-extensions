@@ -18,20 +18,21 @@ public class HtmlBlockRenderer : AsciiDocObjectRenderer<HtmlBlock>
         var slices = obj.Lines.Lines;
         if (slices is not null)
         {
-            renderer.EnsureLine();
-            for (int i = 0; i < slices.Length; i++)
+            for (var i = 0; i < slices.Length; i++)
             {
-                ref StringSlice slice = ref slices[i].Slice;
+                ref var slice = ref slices[i].Slice;
                 if (slice.Text is null)
                 {
                     break;
                 }
 
-                var span = slice.AsSpan();
-                renderer.Write(span);
+                renderer.EnsureLine();
+                renderer.Write(slice.AsSpan());
+            }
+            if (!renderer.IsLastInContainer)
+            {
                 renderer.EnsureLine();
             }
-            renderer.WriteLine();
         }
     }
 }
