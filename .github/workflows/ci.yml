@@ -16,6 +16,7 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -50,8 +51,9 @@ jobs:
         path: code-coverage-results.md
     - name: Write to Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
   release:
-    if: startsWith(github.event.ref, 'refs/tags/')
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/')
     needs: test
     runs-on: ubuntu-latest
     steps:
