@@ -9,3 +9,11 @@ on:
 jobs:
   shared:
     uses: ./.github/workflows/shared.yml
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Build release
+      run: dotnet build src/mcpride-markdig-extensions.sln --no-restore --configuration Release
