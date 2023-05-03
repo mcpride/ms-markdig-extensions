@@ -282,3 +282,4 @@ paket-files/
 /pkgs/_tmp
 
 /coverage
+/test-results

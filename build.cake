@@ -1,22 +1,17 @@
 #tool nuget:?package=ReportGenerator&version=4.8.13
-#addin nuget:?package=Cake.Coverlet&version=3.0.2
-#addin nuget:?package=Cake.Incubator&version=8.0.0
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Debug");
 var solution = "./src/mcpride-markdig-extensions.sln";
 
-bool IsTestProject(SolutionProject project)
-{
-    return (project.Path.HasExtension && project.Name.ToString().EndsWith("Tests"));
-} 
-
 Task("Clean")
     .Does(() =>
     {
-        Information(string.Format("Cleaning files for configuration {0}...", configuration));
-        CleanDirectories(string.Format("./src/**/obj/{0}", configuration));
-        CleanDirectories(string.Format("./src/**/bin/{0}", configuration));
+        Information("Cleaning files...");
+        CleanDirectories("./src/**/obj");
+        CleanDirectories("./src/**/bin");
+        CleanDirectories("./test-results");
+        CleanDirectories("./coverage");
     });
 
 Task("Restore")
@@ -47,7 +42,7 @@ Task("Test")
         var projectFiles = GetFiles("./src/**/*.Tests.csproj");
         foreach(var file in projectFiles) {
 
-            var testResultsDirectory = MakeAbsolute(Directory($"./coverage/{file.GetFilenameWithoutExtension()}"));
+            var testResultsDirectory = MakeAbsolute(Directory($"./test-results/{file.GetFilenameWithoutExtension()}"));
 
             EnsureDirectoryExists(testResultsDirectory);
             CleanDirectory(testResultsDirectory);
@@ -60,8 +55,7 @@ Task("Test")
                     Verbosity = DotNetVerbosity.Normal,
                     Loggers = new [] 
                         {
-                            "console;verbosity=normal",
-                            $"trx;LogFileName={testResultsDirectory}/results.trx"
+                            "console;verbosity=normal"
                         },
                     ResultsDirectory = testResultsDirectory,
                     Collectors = new []
@@ -70,15 +64,7 @@ Task("Test")
                         }
                 };
 
-            var coverletSettings = new CoverletSettings
-                {
-                    CollectCoverage = true,
-                    CoverletOutputFormat = CoverletOutputFormat.cobertura,
-                    CoverletOutputDirectory = testResultsDirectory,
-                    CoverletOutputName = $"coverage"
-                };
-
-            DotNetTest(file, testSettings, coverletSettings);
+            DotNetTest(file.FullPath, testSettings);
 
         }
     });
@@ -93,10 +79,12 @@ Task("Coverage")
         {
             ReportTypes = new [] 
             { 
-                ReportGeneratorReportType.Html 
+                ReportGeneratorReportType.Html, ReportGeneratorReportType.TextSummary
             }
         };
-        ReportGenerator(new GlobPattern("./coverage/**/coverage.cobertura.xml"), coverageDirectory, reportSettings);
+        ReportGenerator(new GlobPattern("./test-results/**/coverage.cobertura.xml"), coverageDirectory, reportSettings);
+        var summary = System.IO.File.ReadAllText("./coverage/Summary.txt");
+        Information(summary);
     });
 
 

@@ -10,4 +10,5 @@ __*Bold Italic Text*__ is done using `__*Bold Italic Text*__`
 <sub>Subscript Text</sub> is done using `<sub>Subscript Text</sub>`  
 ^Superscript Text^ is done using `^Superscript Text^`  
 <sup>Superscript Text</sup> is done using `<sup>Superscript Text</sup>`  
-++Inserted Text++ is done using `++Inserted Text++`
+++Inserted Text++ is done using `++Inserted Text++`  
+<u>Underline Text</u> is done using `<u>Underline Text</u>`

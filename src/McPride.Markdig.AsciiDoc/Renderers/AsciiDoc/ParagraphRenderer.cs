@@ -19,7 +19,11 @@ namespace Markdig.Renderers.AsciiDoc
             }
 
             renderer.WriteLeafInline(obj);
-            renderer.EnsureLine();
+
+            if (!(renderer.IsLastInContainer && obj.Parent is MarkdownDocument))
+            {
+                renderer.EnsureLine();
+            }
         }
     }
 }

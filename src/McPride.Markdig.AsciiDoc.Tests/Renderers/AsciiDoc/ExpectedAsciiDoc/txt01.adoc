@@ -10,4 +10,5 @@ _Italic Text_ is done using `+*Italic Text*+` +
 ~+Subscript Text+~ is done using `+<sub>Subscript Text</sub>+` +
 ^+Superscript Text+^ is done using `+^Superscript Text^+` +
 ^+Superscript Text+^ is done using `+<sup>Superscript Text</sup>+` +
-[.underline]#Inserted Text# is done using `pass:[++Inserted Text++]`
+[.underline]#Inserted Text# is done using `pass:[++Inserted Text++]` +
+[.underline]#Underline Text# is done using `+<u>Underline Text</u>+`
