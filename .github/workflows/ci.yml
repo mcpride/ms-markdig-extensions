@@ -8,4 +8,4 @@ on:
 
 jobs:
   shared:
-    uses: ./.github/workflows/shared.yaml
+    uses: ./.github/workflows/shared.yml
