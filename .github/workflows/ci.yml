@@ -2,17 +2,18 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - "main"
+    tags: 
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-alpha[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-beta[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-rc[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-preview[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-prerelease[0-9]+.[0-9]+"
+      - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-pre[0-9]+.[0-9]+"
   pull_request:
     branches: [ "main" ]
-  tags: 
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-alpha[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-beta[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-rc[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-preview[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-prerelease[0-9]+.[0-9]+"
-    - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-pre[0-9]+.[0-9]+"
 
 jobs:
   test:
@@ -50,7 +51,7 @@ jobs:
     - name: Write to Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
   release:
-    if: github.event_name == 'tags'
+    if: startsWith(github.event.ref, 'refs/tags/')
     needs: test
     runs-on: ubuntu-latest
     steps:
