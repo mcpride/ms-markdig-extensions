@@ -13,6 +13,35 @@ The renderer is marked with a 0 as major version which means, this is in an earl
 
 With update to version 1.0.0 and higher the versioning then will follow the semver pattern.
 
+### Features
+
+* Link handling inclusive images etc.
+* Code block handling (incl. special plantuml diagram handling)
+* Paragraph handling
+* Headings
+* Ordered and unordered lists
+* Quote blocks
+* Simple pipe or grid tables 
+* Thematic breaks
+* Inline literal, bold, italic, underline, strikethrough, superscript, subscript etc. handling
+* breaks
+* ... etc.
+
+### TODOs (mostly not part of CommonMark markdown)
+
+* Footnotes
+* complex table handling (grid tables)
+* custom (html) attributes handling
+* Admonitions
+* Abbreviations
+* Citations
+* Additional diagrams
+* Emojis
+* Mathematics
+* additional media links
+* Task lists
+* ... support for other markdown extensions
+
 ## Installation
 
 You can add `McPride.Markdig.AsciiDoc` as nuget package to your project.
