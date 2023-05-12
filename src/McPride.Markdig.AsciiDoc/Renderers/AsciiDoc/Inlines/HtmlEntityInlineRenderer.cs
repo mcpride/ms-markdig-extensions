@@ -10,6 +10,6 @@ public class HtmlEntityInlineRenderer : AsciiDocObjectRenderer<HtmlEntityInline>
 {
     protected override void Write(AsciiDocRenderer renderer, HtmlEntityInline obj)
     {
-        renderer.Write(obj.Transcoded);
+        renderer.Write(obj.Original);
     }
 }
