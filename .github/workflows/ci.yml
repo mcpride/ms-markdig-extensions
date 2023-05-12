@@ -12,6 +12,8 @@ on:
       - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-preview[0-9]+.[0-9]+"
       - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-prerelease[0-9]+.[0-9]+"
       - "McPride.Markdig*-v[0-9]+.[0-9]+.[0-9]+-pre[0-9]+.[0-9]+"
+    paths-ignore:
+      - '**/README.md'
   pull_request:
     branches: [ "main" ]
 
